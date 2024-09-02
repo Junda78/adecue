@@ -1,0 +1,81 @@
+:root {
+    --color-primario: #29564A;
+    --color-secundario: #4178BF;
+    --color-primario-hover: #98BC93;
+    --color-secundario-hover: #0d5c86;
+    --fuente-primaria: arial;
+    --color-fuente: white;
+    --color-texto: #000000;
+    --sombra: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --borde-radius: 10px;
+}
+
+
+#sachaInchi {
+    padding: 40px 20px;
+    background-color: #f4f4f4; /* Color de fondo más suave */
+    color: #333; /* Texto en un gris oscuro para mejor contraste */
+    border-radius: var(--borde-radius);
+    box-shadow: var(--sombra);
+    font-family: var(--fuente-primaria);
+    animation: fadeIn 1s ease-out; /* Animación de entrada */
+}
+
+.section-title {
+    text-align: center;
+    color: var(--color-primario);
+    margin-bottom: 30px;
+    font-size: 2.5rem; /* Tamaño de fuente más grande para el título */
+    font-weight: bold;
+    animation: slideIn 1s ease-out; /* Animación de entrada para el título */
+}
+
+.sacha-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--borde-radius);
+    box-shadow: var(--sombra);
+    transition: transform 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+.sacha-image:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
+}
+
+h3 {
+    color: var(--color-secundario);
+    margin-top: 20px;
+    font-size: 1.75rem; /* Tamaño de fuente más grande para los subtítulos */
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

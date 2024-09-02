@@ -1,0 +1,60 @@
+:root {
+    --primary-color: #29564A;
+    --primary-font: 'Arial, sans-serif';
+}
+
+body {
+    background-color: whitesmoke;
+    font-family: var(--primary-font);
+}
+
+.container {
+    margin-top: 5rem;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-title {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.card img {
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.modal-content {
+    background-color: whitesmoke;
+}
+
+.modal-title {
+    color: var(--primary-color);
+}
+
+.modal-body {
+    text-align: justify;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--primary-color), 10%);
+    border-color: darken(var(--primary-color), 10%);
+}
+

@@ -1,0 +1,188 @@
+:root {
+    --color-primario: #29564A;
+    --color-secundario: #4178BF;
+    --color-primario-hover: #98BC93;
+    --color-secundario-hover: #0d5c86;
+    --fuente-primaria: arial;
+    --color-fuente: white;
+    --color-texto: #000000;
+    --sombra: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --borde-radius: 10px;
+}
+
+body {
+    font-family: var(--fuente-primaria);
+    color: var(--color-texto);
+    background-color: var(--color-fuente); /* Color de fondo del body */    
+}
+
+/* Logo Section */
+.logo-img{
+    width: 150px; /* Tamaño del logo */
+    height: 150px;
+    border-radius: 50%; /* Hace el logo circular */
+    object-fit: cover; /* Asegura que la imagen se ajuste bien dentro del círculo */
+    margin-top: 20px; /* Separa el logo de la card */
+   
+   
+    margin-bottom: 20px;
+}
+.logo-section{
+    background-color: whitesmoke;
+}
+/* Navbar styles */
+/* Estilos para el Navbar */
+.navbar {
+    padding: 0; /* Elimina el padding del navbar */
+    margin-bottom: 0px;
+}
+
+/* Estilo para el Navbar */
+.custom-navbar .navbar-nav .nav-link {
+    color:#3D2A1A; /* Color del texto de los enlaces */
+    font-size: 20px; /* Tamaño de fuente de los enlaces */
+    padding: 10px 15px; /* Espaciado interno de los enlaces */
+    margin-left: 25px;
+}
+
+/* Estilo para los enlaces cuando están en hover */
+.custom-navbar .navbar-nav .nav-link:hover {
+    color: var(--color-secundario); /* Color del texto en hover */
+    background-color: var(--color-primario-hover); /* Fondo en hover */
+    border-radius: var(--borde-radius); /* Bordes redondeados en hover */
+}
+
+/* Estilo para el enlace activo */
+.custom-navbar .navbar-nav .nav-link.active {
+    color: var(--color-primario); /* Color del texto para el enlace activo */
+    background-color: var(--color-secundario-hover); /* Fondo para el enlace activo */
+    border-radius: var(--borde-radius); /* Bordes redondeados para el enlace activo */
+}
+
+/* Opcional: Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    .custom-navbar .navbar-nav .nav-link {
+        font-size: 14px; /* Tamaño de fuente ajustado en móviles */
+        padding: 8px 12px; /* Espaciado interno ajustado en móviles */
+    }
+}
+.footer {
+    background-color: var(--color-primario); /* Consistent with page theme */
+    color: var(--color-fuente); /* Light color for text */
+    padding: 20px 0; /* Padding for spacing */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-family: var(--fuente-primaria); /* Consistent font */
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer a {
+    color: var(--color-secundario); /* Secondary color for links */
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Underline on hover for better visibility */
+}
+
+/* Responsive design for the footer */
+@media (max-width: 768px) {
+    .footer p {
+        font-size: 12px;
+    }
+}
+
+
+
+.social-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-secundario);
+    color: var(--color-fuente);
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: var(--sombra);
+    transition: background-color 0.3s ease;
+}
+
+.social-button:hover {
+    background-color: var(--color-secundario-hover);
+}
+
+
+.sobre-nosotros-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Fondo claro */
+    color: #333; /* Texto oscuro */
+    border-radius: var(--borde-radius);
+    box-shadow: var(--sombra);
+    font-family: var(--fuente-primaria);
+    animation: fadeIn 1s ease-out; /* Animación de entrada */
+}
+
+.section-title {
+    text-align: center;
+    color: var(--color-primario);
+    margin-bottom: 30px;
+    font-size: 2.5rem; /* Tamaño de fuente más grande para el título */
+    font-weight: bold;
+    animation: slideIn 1s ease-out; /* Animación de entrada para el título */
+}
+
+.sobre-nosotros-text {
+    text-align: justify; /* Justificar el texto */
+    margin-bottom: 20px; /* Espacio entre párrafos */
+}
+
+.sobre-nosotros-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--borde-radius);
+    box-shadow: var(--sombra);
+    transition: transform 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+.sobre-nosotros-image:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+

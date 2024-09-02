@@ -1,0 +1,159 @@
+:root {
+    --color-primario: #29564A;
+    --color-secundario: #003047;
+    --color-primario-hover: #98BC93;
+    --color-secundario-hover: #0d5c86;
+    --fuente-primaria: 'Optima', sans-serif;
+    --color-fuente: #f2f2f2;
+    --color-texto: #000000;
+    --sombra: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --borde-radius: 10px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-secundario);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Para evitar el desplazamiento horizontal */
+    position: relative;
+}
+
+.section {
+    position: relative; /* Para posicionar correctamente el contenido */
+    padding: 80px 0;
+    text-align: center;
+    overflow: hidden; /* Evita que las cards sobresalgan */
+}
+
+.section h2 {
+    color: var(--color-fuente);
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.section p{
+    font-size: 1.5rem;
+    color: var(--color-fuente);
+}
+
+.section .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Alinea el contenido verticalmente */
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.9); /* Fondo de las cards con menos transparencia */
+    padding: 20px;
+    border-radius: var(--borde-radius);
+    box-shadow: var(--sombra);
+    text-align: center;
+    width: calc(100% - 40px); /* Ajusta el ancho de las cards */
+    max-width: 350px;
+    transition: transform 0.3s ease;
+    position: relative; /* Para posicionar el contenido de la card */
+}
+
+.logo {
+    width: 150px; /* Tamaño del logo */
+    height: 150px;
+    border-radius: 50%; /* Hace el logo circular */
+    object-fit: cover; /* Asegura que la imagen se ajuste bien dentro del círculo */
+    margin-top: 20px; /* Separa el logo de la card */
+    border: 5px solid #fff; /* Borde blanco para el logo */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Asegura que particles.js esté detrás de todo */
+    background-color: #014040;
+}
+/* Estilo del botón CTA */
+.btn-cta {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: var(--color-primario);
+    border: none;
+    border-radius: var(--borde-radius);
+    box-shadow: var(--sombra);
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none; /* Quita el subrayado del enlace */
+    margin-top: 20px;
+}
+
+.btn-cta:hover {
+    background-color: var(--color-primario-hover);
+    transform: translateY(-3px);
+}
+
+.btn-cta:active {
+    transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+    .btn-cta {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+}
+
+@media (max-width: 576px) {
+    .btn-cta {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
+
+
+/* Consultas de medios para pantallas pequeñas */
+@media (max-width: 768px) {
+    .card {
+        width: calc(100% - 20px); /* Ajusta el ancho de las cards en pantallas más pequeñas */
+    }
+
+    .logo {
+        width: 120px; /* Tamaño del logo para pantallas más pequeñas */
+        height: 120px;
+        margin-top: 30px; /* Separa más el logo de la card */
+    }
+
+    .section {
+        padding: 40px 0; /* Reduce el padding en pantallas pequeñas */
+    }
+
+    .section h2 {
+        font-size: 2rem; /* Ajusta el tamaño del texto en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        width: calc(100% - 10px); /* Ajusta aún más el ancho de las cards en pantallas muy pequeñas */
+    }
+
+    .logo {
+        width: 100px; /* Tamaño del logo para pantallas muy pequeñas */
+        height: 100px;
+        margin-top: 40px; /* Separa más el logo de la card */
+    }
+
+    .section h2 {
+        font-size: 1.5rem; /* Ajusta el tamaño del texto en pantallas muy pequeñas */
+    }
+}

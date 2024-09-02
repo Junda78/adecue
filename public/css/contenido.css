@@ -1,0 +1,146 @@
+:root {
+    --color-primario: #29564A;
+    --color-secundario: #4178BF;
+    --color-primario-hover: #98BC93;
+    --color-secundario-hover: #0d5c86;
+    --fuente-primaria: 'Optima', sans-serif;
+    --color-fuente: #f2f2f2;
+    --color-texto: #000000;
+    --sombra: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --borde-radius: 10px;
+}
+
+body {
+    font-family: var(--fuente-primaria);
+    color: var(--color-texto);
+    background-color: var(--color-primario);
+    margin: 0; /* Elimina el margen del body */
+    padding: 0; /* Elimina el padding del body */
+}
+
+.carousel,
+.navbar {
+    margin: 0; /* Elimina el margen del carousel y el navbar */
+}
+
+
+
+/* Clase personalizada para las imágenes del carrusel */
+.carousel-img {
+    height: 100%; /* La altura de la imagen se ajusta al contenedor */
+    width: auto; /* Mantiene la proporción original de la imagen */
+    max-width: 100%; /* Limita el ancho máximo al 100% del contenedor */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    object-fit: cover;
+    display: block; /* Asegura que la imagen se muestre como un bloque */
+}
+
+/* Estilo para las leyendas del carrusel */
+.carousel-caption {
+    bottom: 10px; /* Ajusta la posición de la leyenda */
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente para el texto */
+    border-radius: var(--borde-radius); /* Bordes redondeados */
+    padding: 10px;
+    max-width: 90%; /* Limita el ancho máximo de la leyenda */
+    left: 50%; /* Centra la leyenda horizontalmente */
+    transform: translateX(-50%); /* Ajusta el centrado */
+}
+
+/* Estilo para los íconos de navegación del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente para los íconos de navegación */
+    border-radius: 50%; /* Redondea los íconos */
+    padding: 10px;
+}
+
+/* Ajustes específicos para dispositivos móviles */
+@media (max-width: 768px) {
+   
+
+    .carousel-caption {
+        bottom: 5px; /* Ajusta la posición de la leyenda en móviles */
+        padding: 5px; /* Reduce el padding de la leyenda en móviles */
+        font-size: 12px; /* Reduce el tamaño de la fuente de la leyenda en móviles */
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        padding: 5px; /* Reduce el padding de los íconos de navegación en móviles */
+    }
+
+    .carousel-img {
+        height: auto; /* La altura de la imagen se ajusta automáticamente */
+        max-height: 50vh; /* La altura máxima de la imagen se ajusta al 50% del viewport en móviles */
+    }
+}
+
+
+#sachaInchi {
+    padding: 40px 20px;
+    background-color: #f4f4f4; /* Color de fondo más suave */
+    color: #333; /* Texto en un gris oscuro para mejor contraste */
+    border-radius: var(--borde-radius);
+    box-shadow: var(--sombra);
+    font-family: var(--fuente-primaria);
+    animation: fadeIn 1s ease-out; /* Animación de entrada */
+}
+
+.section-title {
+    text-align: center;
+    color: var(--color-primario);
+    margin-bottom: 30px;
+    font-size: 2.5rem; /* Tamaño de fuente más grande para el título */
+    font-weight: bold;
+    animation: slideIn 1s ease-out; /* Animación de entrada para el título */
+}
+
+.sacha-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--borde-radius);
+    box-shadow: var(--sombra);
+    transition: transform 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+.sacha-image:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
+}
+
+h3 {
+    color: var(--color-secundario);
+    margin-top: 20px;
+    font-size: 1.75rem; /* Tamaño de fuente más grande para los subtítulos */
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
